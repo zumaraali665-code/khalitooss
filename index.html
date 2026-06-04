@@ -1,0 +1,332 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalitos Cleaning Services</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#0A2540;
+}
+
+.logo{
+    color:white;
+    font-size:1.8rem;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.logo span{
+    color:#2D9CDB;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#2D9CDB;
+}
+
+.hero{
+    min-height:90vh;
+    background:linear-gradient(rgba(10,37,64,.75),
+    rgba(10,37,64,.75)),
+    url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#2D9CDB;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.services{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#0A2540;
+    font-size:2.5rem;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#0A2540;
+    margin-bottom:15px;
+}
+
+.stats{
+    background:#0A2540;
+    color:white;
+    padding:70px 8%;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    text-align:center;
+    gap:30px;
+}
+
+.stat h2{
+    color:#2D9CDB;
+    font-size:2.5rem;
+}
+
+.contact{
+    padding:80px 8%;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.contact-form button{
+    background:#2D9CDB;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+footer{
+    background:#0A2540;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.3rem;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">KHALI<span>TOS</span></a>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Professional Cleaning Services</h1>
+
+    <p>
+        Keeping homes and businesses spotless with reliable,
+        affordable, and high-quality cleaning solutions.
+    </p>
+
+    <a href="#contact" class="btn">Get Free Quote</a>
+</section>
+
+<section class="services" id="services">
+
+    <div class="section-title">
+        <h2>Our Services</h2>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="card">
+            <h3>House Cleaning</h3>
+            <p>
+                Regular and deep cleaning for apartments,
+                homes, and residential properties.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Office Cleaning</h3>
+            <p>
+                Professional cleaning services for offices,
+                workspaces, and commercial buildings.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Deep Cleaning</h3>
+            <p>
+                Intensive cleaning for kitchens, bathrooms,
+                and hard-to-reach areas.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Move-In / Move-Out</h3>
+            <p>
+                Complete property cleaning before moving in
+                or after moving out.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <h2>500+</h2>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat">
+            <h2>1000+</h2>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat">
+            <h2>5+</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>Customer Support</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+    </div>
+
+    <form class="contact-form">
+
+        <input type="text"
+        placeholder="Full Name"
+        required>
+
+        <input type="email"
+        placeholder="Email Address"
+        required>
+
+        <textarea rows="5"
+        placeholder="Tell us about your cleaning needs"></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>
+        © 2026 Khalitos Cleaning Services.
+        Professional Cleaning You Can Trust.
+    </p>
+</footer>
+
+</body>
+</html>
+```
