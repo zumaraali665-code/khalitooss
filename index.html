@@ -1,333 +1,228 @@
-```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalitos Cleaning Services | About Us</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* ABOUT SECTION */
+.about{
+    position:relative;
+    padding:120px 8%;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #072540 0%,
+        #0A4D68 50%,
+        #00A86B 100%
+    );
+}
+
+.about-overlay{
+    position:absolute;
+    inset:0;
+
+    background:radial-gradient(
+        circle at top right,
+        rgba(255,255,255,.08),
+        transparent 40%
+    );
+}
+
+.about-container{
+    position:relative;
+    z-index:2;
+
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-badge{
+    display:inline-block;
+    background:#00C896;
+    color:white;
+    padding:10px 20px;
+    border-radius:50px;
+    font-size:.85rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.about-left h2{
+    color:white;
+    font-size:3.5rem;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.quote{
+    color:#B8FFE3;
+    font-size:1.4rem;
+    font-style:italic;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.about-left p:not(.quote){
+    color:white;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+.stats{
+    display:flex;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+
+    padding:20px 25px;
+    border-radius:15px;
+    min-width:140px;
+
+    border:1px solid rgba(255,255,255,.15);
+    transition:0.3s ease;
+}
+
+.stat:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.18);
+}
+
+.stat h3{
+    color:#00E89A;
+    font-size:2rem;
+    margin-bottom:5px;
+}
+
+.stat span{
+    color:white;
+    font-size:.9rem;
+}
+
+.about-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-watermark{
+    font-size:24rem;
+    font-weight:900;
+    color:transparent;
+
+    -webkit-text-stroke:4px rgba(255,255,255,.15);
+
+    text-shadow:
+        0 0 20px rgba(0,200,150,.3),
+        0 0 40px rgba(0,200,150,.3),
+        0 0 60px rgba(0,200,150,.2);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .about-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .about-left h2{
+        font-size:2.5rem;
+    }
+
+    .stats{
+        justify-content:center;
+    }
+
+    .logo-watermark{
+        font-size:12rem;
+        margin-top:20px;
+    }
+}
+
+</style>
+</head>
+<body>
+
 <section class="about" id="about">
 
-    <!-- Floating bubbles -->
-    <div class="bubble bubble1"></div>
-    <div class="bubble bubble2"></div>
-    <div class="bubble bubble3"></div>
-    <div class="bubble bubble4"></div>
+    <div class="about-overlay"></div>
 
-    <div class="about-content">
+    <div class="about-container">
 
-        <span class="about-tag">
-            KHALITOS CLEANING SERVICES
-        </span>
+        <div class="about-left">
 
-        <h2>Clean Spaces. Better Living.</h2>
+            <span class="about-badge">
+                ABOUT KHALITOS
+            </span>
 
-        <blockquote>
-            "We don't just clean buildings —
-            we create healthier, happier, and more productive
-            environments for the people who use them."
-        </blockquote>
+            <h2>
+                Professional Cleaning Services You Can Trust
+            </h2>
 
-        <p>
-            Khalitos Cleaning Services is dedicated to delivering
-            exceptional cleaning solutions for homes, offices,
-            apartments, and commercial spaces.
+            <p class="quote">
+                "A clean environment creates comfort,
+                productivity and peace of mind."
+            </p>
 
-            We combine professional expertise, attention to detail,
-            and reliable service to ensure every space we clean
-            reflects the highest standards of hygiene and comfort.
+            <p>
+                Khalitos Cleaning Services provides reliable,
+                affordable and high-quality cleaning solutions
+                for homes, offices and commercial spaces.
+                Our team is committed to delivering spotless
+                results through professionalism, attention
+                to detail and customer-focused service.
+            </p>
 
-            Our goal is simple: provide a cleaner, healthier,
-            and more welcoming environment for every client.
-        </p>
+            <div class="stats">
 
-        <div class="about-features">
+                <div class="stat">
+                    <h3>500+</h3>
+                    <span>Happy Clients</span>
+                </div>
 
-            <div class="feature">
-                <div class="icon">🧹</div>
-                <h3>Professional Team</h3>
-                <p>Experienced and trained cleaners.</p>
+                <div class="stat">
+                    <h3>1000+</h3>
+                    <span>Projects Completed</span>
+                </div>
+
+                <div class="stat">
+                    <h3>5+</h3>
+                    <span>Years Experience</span>
+                </div>
+
             </div>
 
-            <div class="feature">
-                <div class="icon">🌱</div>
-                <h3>Eco Friendly</h3>
-                <p>Safe products for families and workplaces.</p>
-            </div>
+        </div>
 
-            <div class="feature">
-                <div class="icon">⭐</div>
-                <h3>Quality Service</h3>
-                <p>Consistent results every visit.</p>
-            </div>
-
-            <div class="feature">
-                <div class="icon">🤝</div>
-                <h3>Trusted Partner</h3>
-                <p>Reliable cleaning you can depend on.</p>
-            </div>
-
+        <div class="about-right">
+            <div class="logo-watermark">K</div>
         </div>
 
     </div>
 
 </section>
-```
 
-```css
-/* =========================
-   ABOUT SECTION
-========================= */
-
-.about{
-    position:relative;
-    overflow:hidden;
-    padding:120px 8%;
-
-    background:
-    linear-gradient(
-        135deg,
-        #041C32 0%,
-        #0A4D68 45%,
-        #00A86B 100%
-    );
-}
-
-/* Giant Watermark K */
-
-.about::before{
-    content:"K";
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-
-    font-size:45rem;
-    font-weight:900;
-
-    color:rgba(255,255,255,0.04);
-
-    z-index:1;
-    user-select:none;
-}
-
-/* Light Glow */
-
-.about::after{
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-    height:700px;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(45,156,219,.25),
-        transparent 70%
-    );
-
-    top:-250px;
-    right:-250px;
-
-    z-index:1;
-}
-
-/* Glass Card */
-
-.about-content{
-    position:relative;
-    z-index:10;
-
-    max-width:1100px;
-    margin:auto;
-
-    padding:60px;
-
-    background:
-    rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(15px);
-
-    border-radius:30px;
-
-    border:
-    1px solid rgba(255,255,255,0.15);
-
-    text-align:center;
-}
-
-/* Tag */
-
-.about-tag{
-    display:inline-block;
-
-    background:#00C896;
-    color:white;
-
-    padding:12px 25px;
-
-    border-radius:50px;
-
-    font-size:.85rem;
-    font-weight:700;
-    letter-spacing:2px;
-
-    margin-bottom:25px;
-}
-
-/* Heading */
-
-.about h2{
-    color:white;
-    font-size:3.5rem;
-    margin-bottom:25px;
-}
-
-/* Quote */
-
-.about blockquote{
-    color:#C7FFE8;
-
-    font-size:1.4rem;
-    font-style:italic;
-
-    line-height:1.8;
-
-    margin-bottom:30px;
-}
-
-/* Paragraph */
-
-.about p{
-    color:white;
-
-    font-size:1.1rem;
-    line-height:1.9;
-
-    margin-bottom:40px;
-}
-
-/* Features */
-
-.about-features{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
-.feature{
-    background:
-    rgba(255,255,255,0.12);
-
-    padding:30px;
-
-    border-radius:20px;
-
-    transition:.4s;
-}
-
-.feature:hover{
-    transform:translateY(-10px);
-
-    background:
-    rgba(0,200,150,.25);
-}
-
-.feature .icon{
-    font-size:2.5rem;
-    margin-bottom:15px;
-}
-
-.feature h3{
-    color:white;
-    margin-bottom:10px;
-}
-
-.feature p{
-    margin:0;
-    font-size:.95rem;
-}
-
-/* Floating Bubbles */
-
-.bubble{
-    position:absolute;
-
-    border-radius:50%;
-
-    background:
-    rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(5px);
-
-    animation:float 8s ease-in-out infinite;
-}
-
-.bubble1{
-    width:140px;
-    height:140px;
-
-    top:8%;
-    left:5%;
-}
-
-.bubble2{
-    width:90px;
-    height:90px;
-
-    bottom:10%;
-    left:15%;
-}
-
-.bubble3{
-    width:170px;
-    height:170px;
-
-    top:15%;
-    right:8%;
-}
-
-.bubble4{
-    width:120px;
-    height:120px;
-
-    bottom:12%;
-    right:18%;
-}
-
-@keyframes float{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-25px);
-    }
-}
-
-/* Responsive */
-
-@media(max-width:768px){
-
-    .about{
-        padding:80px 20px;
-    }
-
-    .about::before{
-        font-size:18rem;
-    }
-
-    .about-content{
-        padding:35px 25px;
-    }
-
-    .about h2{
-        font-size:2.2rem;
-    }
-
-    .about-features{
-        grid-template-columns:1fr;
-    }
-
-    .bubble3,
-    .bubble4{
-        display:none;
-    }
-}
-```
+</body>
+</html>
