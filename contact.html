@@ -6,19 +6,22 @@
 <title>Contact Us | Khalitos Cleaning Services</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
     background:#f5f7fa;
 }
 
+/* NAVIGATION */
+
 nav{
-    background:#0A2540;
+    background:#072540;
     padding:20px 8%;
 }
 
@@ -26,155 +29,227 @@ nav{
     color:white;
     text-decoration:none;
     font-size:1.8rem;
-    font-weight:bold;
+    font-weight:700;
 }
 
 .logo span{
-    color:#2D9CDB;
+    color:#00C896;
 }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
-}
+/* HERO */
 
-.header{
+.contact-hero{
+    background:linear-gradient(
+        135deg,
+        #072540 0%,
+        #0A4D68 50%,
+        #00A86B 100%
+    );
+
+    color:white;
     text-align:center;
-    margin-bottom:50px;
+    padding:100px 20px;
 }
 
-.header h1{
-    color:#0A2540;
+.contact-hero h1{
+    font-size:3rem;
     margin-bottom:15px;
 }
 
-.header p{
-    color:#555;
+.contact-hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:1.8;
 }
+
+/* CONTAINER */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+/* GRID */
 
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
+    gap:40px;
 }
+
+/* CARDS */
 
 .contact-info,
 .contact-form{
     background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    padding:40px;
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
 }
 
 .contact-info h2,
 .contact-form h2{
-    color:#0A2540;
-    margin-bottom:20px;
+    color:#072540;
+    margin-bottom:25px;
 }
 
 .contact-info p{
-    margin-bottom:15px;
-    color:#444;
+    margin-bottom:20px;
+    color:#555;
+    line-height:1.7;
 }
 
 .contact-info a{
-    color:#2D9CDB;
+    color:#00A86B;
     text-decoration:none;
+    font-weight:600;
 }
 
-.contact-form form{
+.contact-info a:hover{
+    color:#0A4D68;
+}
+
+/* FORM */
+
+form{
     display:flex;
     flex-direction:column;
-    gap:15px;
+    gap:18px;
 }
 
-.contact-form label{
-    font-weight:bold;
-    color:#333;
+label{
+    font-weight:600;
+    color:#072540;
 }
 
-.contact-form input,
-.contact-form textarea{
-    padding:14px;
+input,
+textarea{
+    width:100%;
+    padding:15px;
+
     border:1px solid #ddd;
-    border-radius:8px;
+    border-radius:10px;
+
+    font-size:1rem;
+    outline:none;
+    transition:.3s;
 }
 
-.contact-form button{
-    background:#2D9CDB;
+input:focus,
+textarea:focus{
+    border-color:#00A86B;
+}
+
+button{
+    background:#00A86B;
     color:white;
+
     border:none;
-    padding:14px;
-    border-radius:8px;
+    padding:16px;
+
+    border-radius:10px;
+
+    font-size:1rem;
+    font-weight:700;
+
     cursor:pointer;
-    font-weight:bold;
+    transition:.3s;
 }
 
-.contact-form button:hover{
-    background:#1f86c8;
+button:hover{
+    background:#008f5a;
+    transform:translateY(-2px);
 }
+
+/* FOOTER */
 
 footer{
-    background:#0A2540;
+    background:#072540;
     color:white;
     text-align:center;
-    padding:20px;
-    margin-top:40px;
+    padding:25px;
 }
 
-@media(max-width:768px){
-    .container{
-        padding:40px 15px;
-    }
+/* RESPONSIVE */
+
+@media(max-width:900px){
 
     .contact-grid{
         grid-template-columns:1fr;
     }
+
+    .contact-hero h1{
+        font-size:2.3rem;
+    }
+
 }
+
 </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html" class="logo">KHALI<span>TOS</span></a>
+    <a href="index.html" class="logo">
+        KHALI<span>TOS</span>
+    </a>
 </nav>
 
-<div class="container">
+<section class="contact-hero">
 
-    <div class="header">
-        <h1>Contact Khalitos Cleaning Services</h1>
-        <p>
-            Get in touch with us for professional cleaning services,
-            quotations, and bookings.
-        </p>
-    </div>
+    <h1>Contact Khalitos Cleaning Services</h1>
+
+    <p>
+        Get in touch with our professional team for
+        residential, commercial and office cleaning
+        services. We are ready to provide a spotless
+        solution tailored to your needs.
+    </p>
+
+</section>
+
+<div class="container">
 
     <div class="contact-grid">
 
         <div class="contact-info">
+
             <h2>Contact Information</h2>
 
             <p>
-                <strong>Phone:</strong>
-                <a href="tel:+254701433470">0701 433 470</a>
+                <strong>📞 Phone:</strong><br>
+                <a href="tel:+254701433470">
+                    0701 433 470
+                </a>
             </p>
 
             <p>
-                <strong>Instagram:</strong>
+                <strong>📷 Instagram:</strong><br>
                 <a href="https://instagram.com/khalitoscleaningservices" target="_blank">
                     @khalitoscleaningservices
                 </a>
             </p>
 
-            <p><strong>Availability:</strong> Monday - Saturday</p>
+            <p>
+                <strong>🕒 Availability:</strong><br>
+                Monday - Saturday
+            </p>
 
-            <p><strong>Service:</strong> Residential & Commercial Cleaning</p>
+            <p>
+                <strong>✨ Services:</strong><br>
+                Residential Cleaning<br>
+                Commercial Cleaning<br>
+                Office Cleaning
+            </p>
+
         </div>
 
         <div class="contact-form">
 
-            <h2>Send Us a Message</h2>
+            <h2>Request a Quote</h2>
 
             <form action="submit.php" method="POST">
 
@@ -183,7 +258,7 @@ footer{
                     type="text"
                     id="fullName"
                     name="fullName"
-                    placeholder="Full Name"
+                    placeholder="Enter your full name"
                     required
                 >
 
@@ -192,7 +267,7 @@ footer{
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Email Address"
+                    placeholder="Enter your email"
                     required
                 >
 
@@ -201,7 +276,7 @@ footer{
                     type="tel"
                     id="phone"
                     name="phone"
-                    placeholder="Phone Number"
+                    placeholder="Enter your phone number"
                     required
                 >
 
@@ -210,12 +285,12 @@ footer{
                     id="message"
                     name="message"
                     rows="5"
-                    placeholder="Tell us about your cleaning needs"
+                    placeholder="Tell us about your cleaning requirements"
                     required
                 ></textarea>
 
                 <button type="submit">
-                    Request a Quote
+                    Get Free Quote
                 </button>
 
             </form>
@@ -227,7 +302,7 @@ footer{
 </div>
 
 <footer>
-    <p>© 2026 Khalitos Cleaning Services</p>
+    <p>© 2026 Khalitos Cleaning Services. All Rights Reserved.</p>
 </footer>
 
 </body>
