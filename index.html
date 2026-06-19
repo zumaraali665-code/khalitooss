@@ -1,55 +1,63 @@
 ```html
 <section class="about" id="about">
 
-    <div class="big-k">K</div>
+    <!-- Floating bubbles -->
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
 
     <div class="about-content">
 
         <span class="about-tag">
-            PROFESSIONAL CLEANING SERVICES
+            KHALITOS CLEANING SERVICES
         </span>
 
-        <h2>
-            Clean Spaces. Healthy Living.
-        </h2>
+        <h2>Clean Spaces. Better Living.</h2>
 
         <blockquote>
-            "A clean environment isn't just about appearance —
-            it's about creating comfort, productivity, and peace
-            of mind for every space we touch."
+            "We don't just clean buildings —
+            we create healthier, happier, and more productive
+            environments for the people who use them."
         </blockquote>
 
         <p>
-            At Khalitos Cleaning Services, we believe that every
-            home, office, and commercial property deserves the
-            highest standard of cleanliness.
+            Khalitos Cleaning Services is dedicated to delivering
+            exceptional cleaning solutions for homes, offices,
+            apartments, and commercial spaces.
 
-            Our mission is simple: to provide reliable,
-            affordable, and professional cleaning solutions that
-            leave every client satisfied.
+            We combine professional expertise, attention to detail,
+            and reliable service to ensure every space we clean
+            reflects the highest standards of hygiene and comfort.
 
-            Whether you need regular house cleaning, office
-            maintenance, deep cleaning, or move-in/move-out
-            services, our experienced team delivers exceptional
-            results with attention to every detail.
+            Our goal is simple: provide a cleaner, healthier,
+            and more welcoming environment for every client.
         </p>
 
         <div class="about-features">
 
             <div class="feature">
-                ✓ Trusted Professionals
+                <div class="icon">🧹</div>
+                <h3>Professional Team</h3>
+                <p>Experienced and trained cleaners.</p>
             </div>
 
             <div class="feature">
-                ✓ Eco-Friendly Products
+                <div class="icon">🌱</div>
+                <h3>Eco Friendly</h3>
+                <p>Safe products for families and workplaces.</p>
             </div>
 
             <div class="feature">
-                ✓ Affordable Pricing
+                <div class="icon">⭐</div>
+                <h3>Quality Service</h3>
+                <p>Consistent results every visit.</p>
             </div>
 
             <div class="feature">
-                ✓ Reliable Service
+                <div class="icon">🤝</div>
+                <h3>Trusted Partner</h3>
+                <p>Reliable cleaning you can depend on.</p>
             </div>
 
         </div>
@@ -60,102 +68,249 @@
 ```
 
 ```css
+/* =========================
+   ABOUT SECTION
+========================= */
+
 .about{
     position:relative;
     overflow:hidden;
     padding:120px 8%;
+
     background:
     linear-gradient(
         135deg,
-        #0A2540 0%,
-        #0E5C8A 50%,
+        #041C32 0%,
+        #0A4D68 45%,
         #00A86B 100%
     );
 }
 
-.big-k{
+/* Giant Watermark K */
+
+.about::before{
+    content:"K";
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    font-size:35rem;
+
+    font-size:45rem;
     font-weight:900;
-    color:rgba(255,255,255,0.05);
-    line-height:1;
-    pointer-events:none;
+
+    color:rgba(255,255,255,0.04);
+
+    z-index:1;
     user-select:none;
 }
 
+/* Light Glow */
+
+.about::after{
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(45,156,219,.25),
+        transparent 70%
+    );
+
+    top:-250px;
+    right:-250px;
+
+    z-index:1;
+}
+
+/* Glass Card */
+
 .about-content{
     position:relative;
-    z-index:2;
-    max-width:900px;
+    z-index:10;
+
+    max-width:1100px;
     margin:auto;
-    text-align:center;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
+
     padding:60px;
-    border-radius:25px;
-    border:1px solid rgba(255,255,255,0.15);
+
+    background:
+    rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    text-align:center;
 }
+
+/* Tag */
 
 .about-tag{
     display:inline-block;
+
     background:#00C896;
     color:white;
-    padding:10px 20px;
+
+    padding:12px 25px;
+
     border-radius:50px;
-    font-size:.8rem;
-    font-weight:bold;
+
+    font-size:.85rem;
+    font-weight:700;
     letter-spacing:2px;
+
     margin-bottom:25px;
 }
+
+/* Heading */
 
 .about h2{
     color:white;
-    font-size:3rem;
+    font-size:3.5rem;
     margin-bottom:25px;
 }
 
+/* Quote */
+
 .about blockquote{
-    color:#B8F5D3;
+    color:#C7FFE8;
+
     font-size:1.4rem;
     font-style:italic;
-    margin-bottom:30px;
+
     line-height:1.8;
+
+    margin-bottom:30px;
 }
+
+/* Paragraph */
 
 .about p{
     color:white;
+
     font-size:1.1rem;
     line-height:1.9;
+
     margin-bottom:40px;
 }
+
+/* Features */
 
 .about-features{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:20px;
+    gap:25px;
 }
 
 .feature{
-    background:rgba(255,255,255,0.1);
-    color:white;
-    padding:18px;
-    border-radius:12px;
-    font-weight:600;
-    transition:.3s;
+    background:
+    rgba(255,255,255,0.12);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    transition:.4s;
 }
 
 .feature:hover{
-    background:#00C896;
-    transform:translateY(-5px);
+    transform:translateY(-10px);
+
+    background:
+    rgba(0,200,150,.25);
 }
+
+.feature .icon{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+.feature p{
+    margin:0;
+    font-size:.95rem;
+}
+
+/* Floating Bubbles */
+
+.bubble{
+    position:absolute;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(5px);
+
+    animation:float 8s ease-in-out infinite;
+}
+
+.bubble1{
+    width:140px;
+    height:140px;
+
+    top:8%;
+    left:5%;
+}
+
+.bubble2{
+    width:90px;
+    height:90px;
+
+    bottom:10%;
+    left:15%;
+}
+
+.bubble3{
+    width:170px;
+    height:170px;
+
+    top:15%;
+    right:8%;
+}
+
+.bubble4{
+    width:120px;
+    height:120px;
+
+    bottom:12%;
+    right:18%;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-25px);
+    }
+}
+
+/* Responsive */
 
 @media(max-width:768px){
 
-    .big-k{
-        font-size:15rem;
+    .about{
+        padding:80px 20px;
+    }
+
+    .about::before{
+        font-size:18rem;
     }
 
     .about-content{
@@ -163,12 +318,16 @@
     }
 
     .about h2{
-        font-size:2rem;
+        font-size:2.2rem;
     }
 
     .about-features{
         grid-template-columns:1fr;
     }
+
+    .bubble3,
+    .bubble4{
+        display:none;
+    }
 }
 ```
-
