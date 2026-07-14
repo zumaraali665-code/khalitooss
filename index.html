@@ -3,226 +3,997 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khalitos Cleaning Services | About Us</title>
+
+<title>About Us | Khalitos Cleaning Services</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
 
-/* RESET */
+/*==================================
+RESET
+===================================*/
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-/* ABOUT SECTION */
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#f5f8fb;
+color:#222;
+overflow-x:hidden;
+
+}
+
+/*==================================
+SECTION TITLE
+===================================*/
+
+.section-title{
+
+text-align:center;
+margin-bottom:60px;
+
+}
+
+.section-title span{
+
+color:#00A86B;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+
+}
+
+.section-title h2{
+
+font-size:42px;
+margin-top:15px;
+color:#072540;
+
+}
+
+.section-title p{
+
+max-width:700px;
+margin:auto;
+margin-top:15px;
+color:#666;
+line-height:1.8;
+
+}
+
+/*==================================
+ABOUT
+===================================*/
+
 .about{
-    position:relative;
-    padding:120px 8%;
-    overflow:hidden;
 
-    background:linear-gradient(
-        135deg,
-        #072540 0%,
-        #0A4D68 50%,
-        #00A86B 100%
-    );
+position:relative;
+
+padding:120px 8%;
+
+background:
+linear-gradient(
+135deg,
+#072540,
+#0A4D68,
+#00A86B);
+
+overflow:hidden;
+
 }
 
-.about-overlay{
-    position:absolute;
-    inset:0;
+.about::before{
 
-    background:radial-gradient(
-        circle at top right,
-        rgba(255,255,255,.08),
-        transparent 40%
-    );
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+background:rgba(255,255,255,.06);
+
+border-radius:50%;
+
+top:-300px;
+right:-250px;
+
+}
+
+.about::after{
+
+content:"";
+
+position:absolute;
+
+width:400px;
+height:400px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:50%;
+
+bottom:-180px;
+left:-150px;
+
 }
 
 .about-container{
-    position:relative;
-    z-index:2;
 
-    max-width:1200px;
-    margin:auto;
+position:relative;
+z-index:2;
 
-    display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:60px;
-    align-items:center;
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:70px;
+align-items:center;
+
 }
 
 .about-badge{
-    display:inline-block;
-    background:#00C896;
-    color:white;
-    padding:10px 20px;
-    border-radius:50px;
-    font-size:.85rem;
-    font-weight:700;
-    margin-bottom:20px;
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:#00C896;
+
+border-radius:40px;
+
+font-size:.85rem;
+font-weight:700;
+
+color:white;
+
+margin-bottom:20px;
+
 }
 
-.about-left h2{
-    color:white;
-    font-size:3.5rem;
-    line-height:1.2;
-    margin-bottom:25px;
+.about h1{
+
+font-size:55px;
+
+color:white;
+
+margin-bottom:25px;
+
+line-height:1.2;
+
 }
 
 .quote{
-    color:#B8FFE3;
-    font-size:1.4rem;
-    font-style:italic;
-    line-height:1.6;
-    margin-bottom:25px;
+
+font-size:22px;
+
+font-style:italic;
+
+color:#B8FFE3;
+
+margin-bottom:25px;
+
+line-height:1.7;
+
 }
 
-.about-left p:not(.quote){
-    color:white;
-    line-height:1.9;
-    font-size:1.05rem;
+.about p{
+
+color:white;
+
+line-height:1.9;
+
+font-size:17px;
+
 }
 
 .stats{
-    display:flex;
-    gap:30px;
-    margin-top:40px;
-    flex-wrap:wrap;
+
+display:flex;
+
+gap:25px;
+
+margin-top:50px;
+
+flex-wrap:wrap;
+
 }
 
 .stat{
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(10px);
 
-    padding:20px 25px;
-    border-radius:15px;
-    min-width:140px;
+background:rgba(255,255,255,.12);
 
-    border:1px solid rgba(255,255,255,.15);
-    transition:0.3s ease;
+backdrop-filter:blur(12px);
+
+padding:25px;
+
+border-radius:20px;
+
+width:170px;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.15);
+
 }
 
 .stat:hover{
-    transform:translateY(-5px);
-    background:rgba(255,255,255,.18);
+
+transform:translateY(-10px);
+
 }
 
 .stat h3{
-    color:#00E89A;
-    font-size:2rem;
-    margin-bottom:5px;
+
+font-size:42px;
+
+color:#00E89A;
+
+margin-bottom:8px;
+
 }
 
 .stat span{
-    color:white;
-    font-size:.9rem;
+
+color:white;
+
+font-size:14px;
+
 }
 
-.about-right{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.logo-box{
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
 }
 
 .logo-watermark{
-    font-size:24rem;
-    font-weight:900;
-    color:transparent;
 
-    -webkit-text-stroke:4px rgba(255,255,255,.15);
+font-size:18rem;
 
-    text-shadow:
-        0 0 20px rgba(0,200,150,.3),
-        0 0 40px rgba(0,200,150,.3),
-        0 0 60px rgba(0,200,150,.2);
+font-weight:800;
+
+color:transparent;
+
+-webkit-text-stroke:5px rgba(255,255,255,.15);
+
+text-shadow:
+
+0 0 20px rgba(0,200,150,.3),
+
+0 0 50px rgba(0,200,150,.25);
+
 }
 
-/* MOBILE */
+/*==================================
+MISSION
+===================================*/
+
+.mission{
+
+padding:100px 8%;
+
+background:white;
+
+}
+
+.cards{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card i{
+
+font-size:45px;
+
+color:#00A86B;
+
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:18px;
+
+font-size:28px;
+
+color:#072540;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+/*==================================
+COMPANY STORY
+===================================*/
+
+.story{
+
+padding:110px 8%;
+
+background:#eef8fb;
+
+}
+
+.story-container{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.story-image{
+
+background:linear-gradient(135deg,#00A86B,#0A4D68);
+
+height:450px;
+
+border-radius:30px;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+color:white;
+
+font-size:160px;
+
+}
+
+.story-content h2{
+
+font-size:40px;
+
+color:#072540;
+
+margin-bottom:20px;
+
+}
+
+.story-content p{
+
+line-height:2;
+
+color:#555;
+
+margin-bottom:20px;
+
+}
+
+/*==================================
+VALUES
+===================================*/
+
+.values{
+
+padding:110px 8%;
+
+background:white;
+
+}
+
+.value-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+gap:30px;
+
+}
+
+.value{
+
+text-align:center;
+
+padding:40px 25px;
+
+border-radius:20px;
+
+background:#f5f8fb;
+
+transition:.35s;
+
+}
+
+.value:hover{
+
+background:#00A86B;
+
+color:white;
+
+transform:translateY(-10px);
+
+}
+
+.value i{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+color:#00A86B;
+
+transition:.35s;
+
+}
+
+.value:hover i{
+
+color:white;
+
+}
+
+.value h3{
+
+margin-bottom:15px;
+
+}
+
+.value p{
+
+line-height:1.8;
+
+}
+
+/* Responsive */
+
 @media(max-width:900px){
 
-    .about-container{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
+.about-container,
+.story-container{
 
-    .about-left h2{
-        font-size:2.5rem;
-    }
+grid-template-columns:1fr;
+text-align:center;
 
-    .stats{
-        justify-content:center;
-    }
+}
 
-    .logo-watermark{
-        font-size:12rem;
-        margin-top:20px;
-    }
+.about h1{
+
+font-size:38px;
+
+}
+
+.logo-watermark{
+
+font-size:10rem;
+
+margin-top:30px;
+
+}
+
+.stats{
+
+justify-content:center;
+
+}
+
 }
 
 </style>
+
 </head>
+
 <body>
 
-<section class="about" id="about">
+<!-- ABOUT SECTION -->
+<section class="about">
 
-    <div class="about-overlay"></div>
+<div class="about-container">
 
-    <div class="about-container">
+<div>
 
-        <div class="about-left">
+<div class="about-badge">ABOUT KHALITOS</div>
 
-            <span class="about-badge">
-                ABOUT KHALITOS
-            </span>
+<h1>Professional Cleaning Services You Can Trust</h1>
 
-            <h2>
-                Professional Cleaning Services You Can Trust
-            </h2>
+<p class="quote">
+"A clean environment creates comfort, productivity, and peace of mind."
+</p>
 
-            <p class="quote">
-                "A clean environment creates comfort,
-                productivity and peace of mind."
+<p>
+Khalitos Cleaning Services is committed to delivering exceptional residential and commercial cleaning services across Nairobi. We combine skilled professionals, eco-friendly products, and attention to detail to ensure every space is spotless, healthy, and welcoming.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h3 class="counter" data-target="500">0</h3>
+<span>Happy Clients</span>
+</div>
+
+<div class="stat">
+<h3 class="counter" data-target="1000">0</h3>
+<span>Projects Completed</span>
+</div>
+
+<div class="stat">
+<h3 class="counter" data-target="5">0</h3>
+<span>Years Experience</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="logo-box">
+<div class="logo-watermark">K</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+
+<div class="section-title">
+
+<span>Who We Are</span>
+
+<h2>Mission & Vision</h2>
+
+<p>
+Our commitment is to provide reliable, professional, and affordable cleaning services that exceed customer expectations.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-bullseye"></i>
+<h3>Our Mission</h3>
+<p>
+To provide dependable, affordable, and eco-friendly cleaning solutions that create healthier homes, offices, and commercial spaces while delivering exceptional customer service.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-eye"></i>
+<h3>Our Vision</h3>
+<p>
+To become Nairobi's most trusted cleaning company by consistently delivering quality service, innovation, and long-lasting customer relationships.
+</p>
+</div>
+
+</div>
+
+</section>
+<!-- =========================
+     COMPANY STORY
+========================= -->
+
+<section class="story">
+
+    <div class="story-container">
+
+        <div class="story-image">
+            <i class="fas fa-broom"></i>
+        </div>
+
+        <div class="story-content">
+
+            <span class="about-badge">OUR STORY</span>
+
+            <h2>Cleaning With Excellence Since Day One</h2>
+
+            <p>
+                Khalitos Cleaning Services was founded with a simple goal:
+                to provide reliable, affordable, and professional cleaning
+                services that families and businesses can trust.
             </p>
 
             <p>
-                Khalitos Cleaning Services provides reliable,
-                affordable and high-quality cleaning solutions
-                for homes, offices and commercial spaces.
-                Our team is committed to delivering spotless
-                results through professionalism, attention
-                to detail and customer-focused service.
+                Over the years, we have built a reputation for delivering
+                spotless results, exceptional customer service, and
+                environmentally friendly cleaning solutions. Whether it's
+                a home, office, apartment, or commercial building, we
+                approach every project with dedication and attention to detail.
             </p>
 
-            <div class="stats">
+            <p>
+                Today, we proudly serve clients across Nairobi and its
+                surrounding areas, helping create cleaner, healthier,
+                and more comfortable environments.
+            </p>
 
-                <div class="stat">
-                    <h3>500+</h3>
-                    <span>Happy Clients</span>
-                </div>
+        </div>
 
-                <div class="stat">
-                    <h3>1000+</h3>
-                    <span>Projects Completed</span>
-                </div>
+    </div>
 
-                <div class="stat">
-                    <h3>5+</h3>
-                    <span>Years Experience</span>
-                </div>
+</section>
+
+<!-- =========================
+     CORE VALUES
+========================= -->
+
+<section class="values">
+
+    <div class="section-title">
+
+        <span>OUR VALUES</span>
+
+        <h2>What Drives Us</h2>
+
+        <p>
+            Our core values guide everything we do and ensure every client
+            receives exceptional cleaning services.
+        </p>
+
+    </div>
+
+    <div class="value-grid">
+
+        <div class="value">
+            <i class="fas fa-star"></i>
+            <h3>Quality</h3>
+            <p>
+                We never compromise on delivering outstanding cleaning
+                standards.
+            </p>
+        </div>
+
+        <div class="value">
+            <i class="fas fa-handshake"></i>
+            <h3>Integrity</h3>
+            <p>
+                Honest communication and dependable service are at the
+                heart of our company.
+            </p>
+        </div>
+
+        <div class="value">
+            <i class="fas fa-leaf"></i>
+            <h3>Eco-Friendly</h3>
+            <p>
+                We use safe and environmentally responsible cleaning
+                products whenever possible.
+            </p>
+        </div>
+
+        <div class="value">
+            <i class="fas fa-users"></i>
+            <h3>Customer First</h3>
+            <p>
+                Every cleaning project is completed with our customers'
+                satisfaction as the top priority.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section class="mission">
+
+    <div class="section-title">
+
+        <span>WHY US</span>
+
+        <h2>Why Choose Khalitos?</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fas fa-user-check"></i>
+            <h3>Experienced Staff</h3>
+            <p>
+                Our cleaners are trained professionals committed to
+                delivering quality work.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-clock"></i>
+            <h3>Reliable Service</h3>
+            <p>
+                We arrive on time and complete every cleaning task
+                efficiently.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Trusted Company</h3>
+            <p>
+                Hundreds of satisfied clients trust us with their homes
+                and workplaces.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     OUR TEAM
+========================= -->
+
+<section class="values">
+
+    <div class="section-title">
+
+        <span>OUR TEAM</span>
+
+        <h2>Meet Our Professionals</h2>
+
+    </div>
+
+    <div class="value-grid">
+
+        <div class="value">
+            <i class="fas fa-user-tie"></i>
+            <h3>Operations Manager</h3>
+            <p>Ensures every project runs smoothly.</p>
+        </div>
+
+        <div class="value">
+            <i class="fas fa-headset"></i>
+            <h3>Customer Support</h3>
+            <p>Ready to assist clients with bookings and inquiries.</p>
+        </div>
+
+        <div class="value">
+            <i class="fas fa-hard-hat"></i>
+            <h3>Cleaning Supervisor</h3>
+            <p>Oversees quality control on every cleaning assignment.</p>
+        </div>
+
+        <div class="value">
+            <i class="fas fa-spray-can-sparkles"></i>
+            <h3>Cleaning Specialists</h3>
+            <p>Dedicated professionals committed to spotless results.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     AREAS WE SERVE
+========================= -->
+
+<section class="mission">
+
+    <div class="section-title">
+
+        <span>NAIROBI</span>
+
+        <h2>Areas We Serve</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Residential Areas</h3>
+
+            <p>
+                Kilimani<br>
+                Kileleshwa<br>
+                Karen<br>
+                Lavington<br>
+                Runda<br>
+                Ruaka
+            </p>
+
+        </div>
+
+        <div class="card">
+            <h3>Commercial Areas</h3>
+
+            <p>
+                Nairobi CBD<br>
+                Westlands<br>
+                Upper Hill<br>
+                Parklands<br>
+                Industrial Area<br>
+                South B & South C
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="about">
+
+    <div class="about-container">
+
+        <div>
+
+            <h1>Ready for a Spotless Space?</h1>
+
+            <p class="quote">
+                Let Khalitos Cleaning Services transform your home or office today.
+            </p>
+
+            <div style="margin-top:35px;">
+
+                <a href="booking.html"
+                style="padding:16px 35px;
+                background:#00C896;
+                color:white;
+                text-decoration:none;
+                border-radius:40px;
+                font-weight:600;
+                margin-right:15px;">
+
+                Book Now
+
+                </a>
+
+                <a href="contact.html"
+                style="padding:16px 35px;
+                background:white;
+                color:#072540;
+                text-decoration:none;
+                border-radius:40px;
+                font-weight:600;">
+
+                Contact Us
+
+                </a>
 
             </div>
 
         </div>
 
-        <div class="about-right">
+        <div class="logo-box">
             <div class="logo-watermark">K</div>
         </div>
 
     </div>
 
 </section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer style="background:#072540;color:white;padding:40px;text-align:center;">
+
+    <h2>Khalitos Cleaning Services</h2>
+
+    <p style="margin:15px 0;">
+        Professional Cleaning Services Across Nairobi
+    </p>
+
+    <div style="font-size:28px;margin:20px 0;">
+
+        <i class="fab fa-facebook"></i>
+
+        <i class="fab fa-instagram" style="margin:0 15px;"></i>
+
+        <i class="fab fa-x-twitter"></i>
+
+        <i class="fab fa-linkedin" style="margin-left:15px;"></i>
+
+    </div>
+
+    <p>
+        © 2026 Khalitos Cleaning Services. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script>
+
+// Counter Animation
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.dataset.target;
+
+const current=+counter.innerText;
+
+const increment=target/100;
+
+if(current<target){
+
+counter.innerText=Math.ceil(current+increment);
+
+setTimeout(update,20);
+
+}else{
+
+counter.innerText=target+"+";
+
+}
+
+}
+
+update();
+
+});
+
+</script>
 
 </body>
 </html>
